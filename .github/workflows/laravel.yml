@@ -27,6 +27,6 @@ jobs:
               user: forge
               host: 167.99.98.182
               path: /home/test
-              owner: forge
+              owner: frogmarketmedia
           env:
               DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
