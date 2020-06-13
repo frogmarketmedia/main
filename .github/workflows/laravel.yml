@@ -27,6 +27,6 @@ jobs:
               user: forge
               host: 167.99.98.182
               path: /home/test
-              owner: owner
+              owner: forge
           env:
               DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
