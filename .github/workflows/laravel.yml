@@ -1,0 +1,32 @@
+name: Laravel
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs: 
+  build: 
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      -   name: Checkout Repository
+          uses: actions/checkout@master
+      -   name: Setup Enviroment
+          uses: frogmarketmedia/setup-php@master
+          with:
+            php-version: '7.4'
+      -   name: Speed up the packages installation process
+          run: composer global require frogmarketmedia/prestissimo
+      -   name: Install Packages
+          run: composer install --no-dev
+      -   name: Deploy to Server
+          uses: frogmarketmedia/deploy@laravel
+          with:
+              user: forge
+              host: 167.99.98.182
+              path: /home/test
+              owner: owner
+          env:
+              DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
