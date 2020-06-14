@@ -26,7 +26,7 @@ jobs:
           with:
               user: forge
               host: 167.99.98.182
-              path: /{{ secrets.DEPLOY_DIRECTORY }}
+              path: /erik-smith-5ee5d80ac34da
               owner: frogmarketmedia
           env:
               DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
