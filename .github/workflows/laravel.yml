@@ -13,10 +13,6 @@ jobs:
     steps:
       -   name: Checkout Repository
           uses: actions/checkout@v1
-      -   name: Setup Enviroment
-          uses: frogmarketmedia/setup-php@v1
-          with:
-            php-version: '7.4'
       -   name: Speed up the packages installation process
           run: composer global require hirak/prestissimo
       -   name: Install Packages
