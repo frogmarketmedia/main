@@ -22,7 +22,7 @@ jobs:
           with:
               user: forge
               host: 167.99.98.182
-              path: /home/erik-smith-5ee5eba063511/juliandsmith.com/current
+              path: /home/erik-smith-5ee5ee8b77385/juliandsmith.com/current
               owner: frogmarketmedia
           env:
               DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
