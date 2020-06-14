@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -   name: Checkout Repository
-          uses: actions/checkout@master
+          uses: actions/checkout@v1
       -   name: Setup Enviroment
-          uses: frogmarketmedia/setup-php@master
+          uses: frogmarketmedia/setup-php@v1
           with:
             php-version: '7.4'
       -   name: Speed up the packages installation process
@@ -26,7 +26,7 @@ jobs:
           with:
               user: forge
               host: 167.99.98.182
-              path: /home/test
+              path: /{{ secrets.DEPLOY_DIRECTORY }}
               owner: frogmarketmedia
           env:
               DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
